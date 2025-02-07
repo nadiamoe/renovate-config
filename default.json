@@ -1,0 +1,48 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":semanticCommitsDisabled"
+  ],
+  "packageRules": [
+    {
+      "description": "Automerge GHA non-majors",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "digest",
+        "pinDigest",
+        "patch",
+        "minor"
+      ],
+      "automerge": true
+    },
+    {
+      "description": "Automerge alpine",
+      "matchPackageNames": [
+        "alpine"
+      ],
+      "matchUpdateTypes": [
+        "digest",
+        "pinDigest",
+        "patch",
+        "minor"
+      ],
+      "automerge": true
+    },
+    {
+      "description": "Automerge patches for ecosystems that generally follow semver",
+      "matchManagers": [
+        "gomod",
+        "docker"
+      ],
+      "matchUpdateTypes": [
+        "digest",
+        "pinDigest",
+        "patch"
+      ],
+      "automerge": true
+    }
+  ]
+}
