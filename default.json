@@ -34,7 +34,7 @@
     },
     {
       "description": "Automerge patches for ecosystems that generally follow semver",
-      "matchManagers": [
+      "matchDatasources": [
         "gomod",
         "docker"
       ],
