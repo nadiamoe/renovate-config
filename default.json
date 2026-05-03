@@ -20,6 +20,20 @@
       "automerge": true
     },
     {
+      "description": "Group commonplace GHA majors that don't usually break things",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchPackageNames": [
+        "actions/*",
+        "docker/*"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "GitHub Actions"
+    },
+    {
       "description": "Automerge alpine",
       "matchPackageNames": [
         "alpine"
