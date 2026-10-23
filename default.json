@@ -58,6 +58,17 @@
         "patch"
       ],
       "automerge": true
+    },
+    {
+      "description": "Automerge go toolchain minors and patches",
+      "matchDatasources": [
+        "golang-version"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "automerge": true
     }
   ]
 }
